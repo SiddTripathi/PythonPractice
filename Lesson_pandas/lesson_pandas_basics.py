@@ -21,4 +21,25 @@ import pandas as pd
 
 brics = pd.DataFrame(dict)
 
-print(brics)
+#print(brics)
+
+#provide index of your choice in data frame. Like instead of default numbers, you can provide two letter COuntry code
+
+brics.index = ["BR","RU","IN","CH","SA"]
+
+#print(brics)
+
+#importing a csv file
+
+cars = pd.read_csv('D:\Python_Pactice\PythonPractice\Lesson_pandas\Book.csv')
+
+print(cars)
+
+print(cars['Model'])
+
+print(cars[['Brand']])
+
+print(cars[['Model','Year']])
+
+#Data frames have indexes so you can travers them just like lists. You can provide specific index or range of index to retreieve elements.
+#there are numerous ways of traversing a dataframe. You can also use iloc (integer index based travers) and loc (label based meaning specify ros and columns)
