@@ -62,3 +62,17 @@ myExt = test_extending_Path.extendingPath()
 myExt.testFunc1()
 
 
+
+#built in modules - as we know there are lots of built-in python modules to do work. 
+
+#to explore these modules, two very important functions are - dir and help
+
+import re
+
+find_members = []
+
+for member in dir(re):
+    if "find" in member:
+        find_members.append(member)
+
+print(sorted(find_members))
