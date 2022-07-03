@@ -12,6 +12,8 @@ numbers.append(1)
 numbers.append(2)
 numbers.append(3)
 
+print(type(names))
+
 strings.append("hello")
 strings.append("world")
 
