@@ -41,5 +41,9 @@ print(cars[['Brand']])
 
 print(cars[['Model','Year']])
 
+print(cars.iloc[2])
+
+
+
 #Data frames have indexes so you can travers them just like lists. You can provide specific index or range of index to retreieve elements.
 #there are numerous ways of traversing a dataframe. You can also use iloc (integer index based travers) and loc (label based meaning specify ros and columns)
