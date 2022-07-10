@@ -1,3 +1,7 @@
+#A closure—unlike a plain function—allows the function to access 
+# those captured variables through the closure’s copies of their values or references, even when the function is invoked outside their scope.
+
+
 def print_msg(number):
     def printer():
         "Here we are using the nonlocal keyword"
@@ -12,8 +16,7 @@ print_msg(9)
 
 def multiplier_of(n):
     def multiplier(number):
-        print(number)
-        print(n)
+        
         return number*n
     return multiplier
 
