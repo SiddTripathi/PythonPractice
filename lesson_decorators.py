@@ -51,6 +51,8 @@ print(mult(10))
 
 #*******DECORATORS**************
 
+
+
 def hello(func):
     print("test function")
     func()
@@ -60,3 +62,23 @@ def hello(func):
 def test():
     print("This is test function")
 
+#-->> the above statement is equivalent to 
+# def test():
+#     print("This is the test function")
+#test = hello(test)
+
+def deco(func):
+    def inner1(*args,**kwargs):
+        print("before execution")
+        returned_value = func(*args,**kwargs)
+        print("after execution")
+        return returned_value
+    return inner1
+
+@deco
+def hello(a,b):
+    print("Inside function")
+    return a*b
+
+a,b = 2,3
+print(hello(a,b))
